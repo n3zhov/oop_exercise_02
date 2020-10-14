@@ -1,7 +1,7 @@
 /*Ежов 204
  *Бюджет
  * Сложение, вычитание, умножение, деление
- * нахождение сопряжённого, сравнение комплексных чисел
+ * бюджетов
  * */
 #include <iostream>
 #include <fstream>
@@ -13,7 +13,7 @@ using namespace std;
 class Budget
 {
 private:
-    //Коэфициенты комплексного числа
+    //Собственная и заёмная часть бюджета
     double a, b;
 public:
     //Стандартный конструктор
@@ -60,7 +60,7 @@ public:
 
 Budget operator"" _bg(const char *str){
     double budget[2];
-    sscanf(str, "%lf %lf", budget[0], budget[1]);
+    sscanf(str, "%lf %lf", &budget[0], &budget[1]);
     return Budget(budget[0], budget[1]);
 }
 
